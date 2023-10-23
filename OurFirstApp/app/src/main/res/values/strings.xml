@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">OurFirstApp</string>
+    <string name="app_name">Jans helt egen app</string>
+    <string name="greeting">Hej Haittham</string>
+
 </resources>
