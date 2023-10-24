@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //btnTryk.setOnClickListener(new MyHandler(this));
 
-        btnTryk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                txtWrite.setText("Handler i anonym indre klasse");
-            }
-        });
+//        btnTryk.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v)
+//            {
+//                txtWrite.setText("Handler i anonymous inner class");
+//            }
+//        });
 
 
     }
@@ -38,5 +38,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v)
     {
         txtWrite.setText("Der blev trykket på Tryk");
+    }
+
+    public void myOnClick(View v)
+    {
+        txtWrite.setText("Handler angivet i layout");
     }
 }
