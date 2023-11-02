@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:id="@+id/theLayout"
     tools:context=".MainActivity">
 
     <TextView
@@ -14,7 +15,6 @@
         android:textSize="25dp"
         android:text="Sensors"
         />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -72,4 +72,9 @@
             android:id="@+id/txtZ"
             android:text="Z:"/>
     </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Rolling Ball"
+        android:id="@+id/btnShowBall"/>
 </LinearLayout>
