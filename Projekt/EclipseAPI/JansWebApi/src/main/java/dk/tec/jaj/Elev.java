@@ -2,16 +2,27 @@ package dk.tec.jaj;
 
 public class Elev 
 {
+	int id;
 	String name;
 	String job;
 	int shoe;
 	
-	public Elev(String name, String job, int shoe) 
-	{	
+	public Elev(int id, String name, String job, int shoe) 
+	{
+		this.id = id;
 		this.name = name;
 		this.job = job;
 		this.shoe = shoe;
 	}
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public Elev() {	}
 	public String getName() {
 		return name;

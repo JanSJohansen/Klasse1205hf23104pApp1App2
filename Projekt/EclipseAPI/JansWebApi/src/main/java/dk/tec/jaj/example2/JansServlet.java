@@ -28,12 +28,12 @@ public class JansServlet extends HttpServlet {
 		AnalyzeRequest analyze = new AnalyzeRequest(request.getPathInfo());
 		
 		ArrayList<Elev> elever = new ArrayList<Elev>();
-		elever.add(new Elev("Anders", "Tagfejer og alt muligt", 47));
-		elever.add(new Elev("Marco", "Hals og næse kommunearbejder og fisker", 47));
-		elever.add(new Elev("Jimmy", "Lokums- og tastatur-renser", 39));
-		elever.add(new Elev("Anna", "Morderserier Kill Bill", 36));
-		elever.add(new Elev("Philip", "Gadefejer og andet", 32));
-		elever.add(new Elev("Frederik", "Omsorgsmedarbejerpraktikantaspirant", 56));
+		elever.add(new Elev(0,"Anders", "Tagfejer og alt muligt", 47));
+		elever.add(new Elev(1, "Marco", "Hals og næse kommunearbejder og fisker", 47));
+		elever.add(new Elev(2,"Jimmy", "Lokums- og tastatur-renser", 39));
+		elever.add(new Elev(3, "Anna", "Morderserier Kill Bill", 36));
+		elever.add(new Elev(4, "Philip", "Gadefejer og andet", 32));
+		elever.add(new Elev(5, "Frederik", "Omsorgsmedarbejerpraktikantaspirant", 56));
 		
 		ObjectMapper mapper = new ObjectMapper();
 		

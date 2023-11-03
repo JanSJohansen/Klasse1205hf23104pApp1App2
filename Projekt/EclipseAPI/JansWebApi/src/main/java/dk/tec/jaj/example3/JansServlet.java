@@ -1,5 +1,6 @@
 package dk.tec.jaj.example3;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -34,8 +35,9 @@ public class JansServlet extends HttpServlet {
 		switch(analyze.getLevel())
 		{
 		case MatchElevId:
-			
-			
+			Elev elev = db.getElevById(analyze.getId());
+			String json = mapper.writeValueAsString(elev);
+			out.print(json);			
 			break;
 		case MatchElev:
 			
@@ -44,10 +46,32 @@ public class JansServlet extends HttpServlet {
 		case MatchNo:
 			out.print("Ingen match");
 		break;
-		}
+		}	
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		BufferedReader reader = request.getReader();
+		String jsonStr = reader.readLine();
+		System.out.println(jsonStr);
+		
+		ObjectMapper mapper = new ObjectMapper();
+		Elev elev = mapper.readValue(jsonStr, Elev.class);
+		System.out.println(elev.getName());
+		
 		
 	}
-
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
